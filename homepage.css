@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Rubik&display=swap');
+
+
+body {
+    background-color: #191716;
+    font-family: 'Rubik', sans-serif;    
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #335c67;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#logoImg {
+    max-width: 30%; /* Adjust the maximum width as needed to reduce the image size */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center-align the image */
+    border-radius: 8px;
+}
+
+.brief {
+    max-width: 6000px;
+    margin: 0 auto;
+}
+
+.searchback{
+    background-color: #335c67;
+}
+
+.search-bar {
+    margin-top: 20px;
+    max-width: 380px;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the search bar horizontally */
+}
+
+
+
+#search-input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none; /* Remove the input focus outline */
+}
+
+#search-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+#search-btn:hover {
+    background-color: #555;
+}
+
+
+
+ 
+#searched-meals {
+    padding: 20px;
+}
+
+#searched-meals h2 {
+    text-align: center;
+}
+
+
+#searched-meals img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+#random-meal {
+    padding: 20px;
+    text-align: center;
+}
+
+#random-meal h2 {
+    color: #fff; /* Set the color of the heading text */
+}
+#random-meal h3 {
+    background-color: #e09f3e; /* Background color for the rectangle box */
+    color: #000000; /* Text color for the title */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 8px; /* Adjust the border-radius for curved corners */
+    margin: 0 auto; /* Center the title horizontally */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 15px;
+    max-width: 100%; /* Adjust the maximum width of the title */
+}
+
+
+#searched-meals h2 {
+    background-color: #335c67; /* Choose your desired background color */
+    color: white; /* Text color */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 8px; /* Adjust the border-radius for curved corners */
+}
+
+
+
+#random-meal img {
+    max-width: 20%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #333; /* Add border around the image */
+    border-radius: 8px; /* Adjust the border-radius for curved corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Outer box shadow */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out; /* Adjust the transition duration for zoom in */
+}
+
+#random-meal img:hover {
+    transform: scale(1.1); /* Increase the scale on hover to zoom in */
+    transition: transform 0.7s ease-in-out; /* Adjust the transition duration for zoom out */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #272727;
+    margin: auto;
+    padding: 20px;
+    color: #fff;
+    border: 1px solid #888;
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    border-radius: 15px; /* Curved edges for the modal */
+}
+
+.modal-content h2 {
+    color: #fff; /* Set the title color to white */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+#modal-content-container p {
+    margin: 10px 0;
+}
+#modal-content-container p {
+    margin: 10px 0;
+}
+#searched-meals-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.meal {
+    /* background-color: white; */
+    width: 19%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px; /* Adjust the border-radius for curved corners */
+    padding: 10px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.meal h3 {
+    background-color: #e09f3e; /* Background color for the rectangle box */
+    color: #000; /* Text color for the title */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 8px; /* Adjust the border-radius for curved corners */
+    margin: 0; /* Remove default margin */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 15px;
+    transition: transform 0.3s ease-in-out; /* Adjust the transition duration for zoom in */
+}
+
+
+
+.meal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid #333; /* Add border around the image */
+    border-radius: 8px; /* Adjust the border-radius for curved corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Outer box shadow */
+    margin-bottom: 10px;
+}
+
+.meal img:hover {
+    transform: scale(1.1); /* Increase the scale on hover to zoom in */
+    transition: transform 0.7s ease-in-out; /* Adjust the transition duration for zoom out */
+
+}
+
+
+
+.ingredients-container {
+    text-align: center; /* Center-align the container */
+}
+
+.ingredients-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    display: inline-block; /* Make the container inline-block for centering */
+}
+
+.ingredients-list li {
+    text-align: left; /* Left-align the list item */
+    margin: 10px 0; /* Adjust margin as needed */
+}
+
+.ingredients-list li span {
+    display: inline-block;
+    width: 10px; /* Adjust as needed for spacing between the bullet and ingredient */
+    text-align: center; /* Center-align the bullet */
+    font-weight: bold; /* Optionally, make the bullet bold */
+    margin-right: 5px; /* Adjust margin to position the bullet more to the center */
+}
+.centered-container {
+    text-align: center;
+    margin: 0 auto; /* Center-align the container */
+}
+
+.centered-container img {
+    max-width: 80%; /* Adjust the maximum width as needed to reduce the image size */
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.centered-container h3 {
+    margin: 10px 0;
+}
+.modal-content-inner {
+    display: flex;
+    align-items: flex-start; /* Align items to the top of the flex container */
+}
+
+.ingredients-and-instructions {
+    margin-left: 20px; /* Adjust margin as needed */
+    max-width: 70%; 
+}
+
+.ingredients {
+    text-align: left;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.ingredients-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.ingredients-list li {
+    text-align: left; /* Left-align the list item */
+    margin: 10px 0; /* Adjust margin as needed */
+}
+
+.ingredients-list li span {
+    display: inline-block;
+    width: 10px; /* Adjust as needed for spacing between the bullet and ingredient */
+    text-align: center; /* Center-align the bullet */
+    font-weight: bold; /* Optionally, make the bullet bold */
+    margin-right: 5px; /* Adjust margin to position the bullet more to the center */
+}
+
+
+.ingredients-and-instructions {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.ingredients {
+    text-align: left;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.ingredients-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.ingredients-list li {
+    text-align: left; /* Left-align the list item */
+    margin: 10px 0; /* Adjust margin as needed */
+}
+
+.ingredients-list li span {
+    display: inline-block;
+    width: 10px; /* Adjust as needed for spacing between the bullet and ingredient */
+    text-align: center; /* Center-align the bullet */
+    font-weight: bold; /* Optionally, make the bullet bold */
+    margin-right: 5px; /* Adjust margin to position the bullet more to the center */
+}
+.modal-image {
+    max-width: 50%; /* Adjust the maximum width as needed */
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-and-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meal-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.instructions-section {
+    background-color: #ffffff; /* Background color for instructions */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 23px;
+    padding: 15px;
+    border-radius: 8px; /* Curved edges for instructions */
+    color: rgb(0, 0, 0);
+}
+
+.ingredients-section {
+    background-color: #ffffff; /* Background color for ingredients */
+    color: #000000;
+    text-align: left;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px; /* Curved edges for ingredients */
+}
+
+
+.left-section,.right-section {
+    width: 50%; /* Adjust the width as needed */
+}
+
+
+.instructions {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 23px;
+}
+
+footer {
+    background-color: #335c67;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    #logoImg {
+        max-width: 100%; /* Adjust to 100% to ensure it fits within the screen */
+    }
+    
+    .brief {
+        max-width: 100%;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        box-sizing: border-box; /* Add box-sizing to include padding and border in the total width */
+    }
+
+    #search-input {
+        padding: 10px;
+        border-radius: 15px 0 0 15px;
+        width: 70%; /* Adjust the width as needed */
+    }
+
+    #search-btn {
+        padding: 10px;
+        border-radius: 0 15px 15px 0;
+        width: 30%; /* Adjust the width as needed */
+    }
+
+    #random-meal img,
+    .meal img,
+    .meal-image {
+        max-width: 100%;
+    }
+
+    #random-meal h3,
+    .meal h3 {
+        font-size: 16px;
+    }
+
+    #random-meal
+
+    .modal-content {
+        width: 100%; /* Adjust to 100% to ensure it fits within the screen */
+        height: 100%; /* Adjust to 100% to ensure it fits within the screen */
+    }
+
+    .modal-content h2,
+    .modal-content p {
+        font-size: 16px;
+    }
+
+    .modal-image {
+        max-width: 100%;
+    }
+
+    .instructions-section,
+    .ingredients-section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+
+    
+    #searched-meals img,
+    .meal img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid #333;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #searched-meals-container {
+        display: block; /* Change to block to make each meal appear in a new row */
+    }
+
+    .meal {
+        width: 100%; /* Make each meal take the full width */
+    }
+}

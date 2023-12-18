@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What to Cook Today</title>
+    <link rel="stylesheet" href="./homepage.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="brief">
+            <h1><img id="logoImg" src="./EASY COOK.png" alt="CookEase Logo"></h1>
+            <p>Enter Easy Cook, a revolutionary culinary companion designed to make your daily meal decisions a breeze. Say goodbye to the frustration of pondering over the question, "What to cook today?" and let Easy Cook inspire your daily culinary adventures. Simply enter your preferences, cravings, or available ingredients into the Easy Cook search bar, and let the magic happen. Whether you're a seasoned chef or a cooking novice, Easy Cook is here to inspire and simplify your daily cooking routine.</p>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for a category">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
+    <!-- Random Meal Section -->
+    <section id="random-meal">
+        <h2>Meal of the Moment</h2>
+        <div id="random-meal-container">
+            <!-- Content will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- List of Searched Meal Categories Section -->
+    <section id="searched-meals" style="display: none;">
+        <h2 id="searchback">Searched Meal Categories</h2>
+        <div id="searched-meals-container">
+            <!-- Content will be dynamically added here -->
+        </div>
+    </section>
+    <!-- Modal for Ingredients and Instructions -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-content-container"></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Designed and Constructed by Prabhas Varma</p>
+    </footer>
+    <script src="./homepage.js"></script>
+</body>
+</html>
