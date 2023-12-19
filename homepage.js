@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch and display random meal on page load
     getRandomMeal();
 
-    // Event listener for search button
     document.getElementById('search-btn').addEventListener('click', () => {
         const searchTerm = document.getElementById('search-input').value.trim();
         if (searchTerm !== '') {
